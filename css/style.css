@@ -68,9 +68,9 @@ section {
 }
 
 .gallery img {
-    width: 50px;
-    margin: 10px;
-    border-radius: 10px;
+    width: 80px;
+    margin: 5px;
+    border-radius: 5px;
 }
 
 @keyframes slide {
