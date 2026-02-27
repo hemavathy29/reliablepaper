@@ -229,12 +229,18 @@ footer {
 /* Social Media Icons */
 .social-icons {
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;              /* space between icons */
+    flex-wrap: nowrap;      /* prevent second line */
+    overflow-x: auto; 
 }
 
 .social-icons a {
     display: inline-block;
     margin: 10px;
-    font-size: 24px;
+    font-size: 20px;
     width: 45px;
     height: 45px;
     line-height: 45px;
@@ -242,6 +248,7 @@ footer {
     text-align: center;
     color: white;
     transition: 0.3s ease;
+    text-decoration: none;
 }
 
 /* Individual Colors */
