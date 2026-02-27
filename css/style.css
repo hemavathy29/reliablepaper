@@ -232,7 +232,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 12px;              /* space between icons */
+    gap: 10px;              /* space between icons */
     flex-wrap: nowrap;      /* prevent second line */
     overflow-x: auto; 
 }
