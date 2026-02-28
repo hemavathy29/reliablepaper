@@ -266,7 +266,7 @@ footer {
     margin-top: 25px;
     display: flex;
     justify-content: center;
-    gap: 5px;              /* space between icons */
+    gap: 10px;              /* space between icons */
 }
 
 .social-icons a {
