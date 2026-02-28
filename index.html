@@ -25,6 +25,7 @@
         <!-- <link rel="icon" href="images/favicon.ico"> -->
     
         <link rel="stylesheet" href="css/style.css">
+        <script src="script.js"></script>
     
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -124,18 +125,23 @@
     <div class="slider">
         <div class="slides">
             <img src="images/Installation-of-our-machine.jpeg" alt="Installation Of Machine">
-            <img src="images/manual-single-die-machine.jpeg" alt="Manual Single Die Machine">
-            <img src="images/Automatic-single-die-machine.jpeg" alt="Automatic Single Die Machine">
-            <img src="images/automatic-double-die-machine.jpeg" alt="Automatic Double Die Machine">
-            <img src="images/News_paper_article.jpeg" alt="News Paper Article">
-            <img src="images/Article2-paper-plate.jpeg" alt="Article2 paper plate">
-            <img src="images/reliable-order-details.jpeg" alt="Reliable Order Details">
-            <img src="images/reliable-quation-summary.jpeg" alt="Reliable Quation Summary">
-            <img src="images/price-list-summary.jpeg" alt="Price List Summary">
-
+            <img src="images/manual-single-die-machine.jpeg" alt="Manual Single Die Machine" onclick="openModal(this)">
+            <img src="images/Automatic-single-die-machine.jpeg" alt="Automatic Single Die Machine" onclick="openModal(this)">
+            <img src="images/automatic-double-die-machine.jpeg" alt="Automatic Double Die Machine" onclick="openModal(this)">
+            <img src="images/News_paper_article.jpeg" alt="News Paper Article" onclick="openModal(this)">
+            <img src="images/Article2-paper-plate.jpeg" alt="Article2 paper plate" onclick="openModal(this)">
+            <img src="images/reliable-order-details.jpeg" alt="Reliable Order Details" onclick="openModal(this)">
+            <img src="images/reliable-quation-summary.jpeg" alt="Reliable Quation Summary" onclick="openModal(this)">
+            <img src="images/price-list-summary.jpeg" alt="Price List Summary" onclick="openModal(this)">
         </div>
     </div>
 </section>
+
+<!-- Image Popup Modal -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="popupImg">
+</div>
 
 <!-- ENQUIRY -->
 <section class="enquiry">
