@@ -207,13 +207,9 @@ section {
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
-    .enquiry-container {
-        padding: 30px;
-        max-width: 95%;
-    }
-
-    .enquiry h2 {
-        font-size: 20px;
+    .enquiry-form button {
+        padding: 14px;
+        font-size: 16px;
     }
 }
 
