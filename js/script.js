@@ -12,19 +12,24 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     // AUTO SLIDE GALLERY
-    const track = document.getElementById("galleryTrack");
-    let scrollAmount = 0;
-    const slideStep = 320; 
+    const slider = document.getElementById("gallerySlider"); 
 
     function autoSlide() {
-        if(!track) return;
-        scrollAmount += slideStep;
+        if(!slider) return;
+        
+        slider.scrollBy({
+            left: 320,
+            behavior: "smooth"
+        });
 
-        if (scrollAmount >= track.scrollWidth - track.clientWidth) {
-            scrollAmount = 0;
+        //Reset when reached end
+
+        if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 10) {
+            slider.scrollTo({
+                left: 0,
+                behavior: "smooth"
+            });
         }
-
-        track.style.transform = `translateX(-"+ scrollAmount+"px)`;
     }
 
     setInterval(autoSlide, 2500);
