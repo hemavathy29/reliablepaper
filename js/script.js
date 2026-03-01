@@ -34,3 +34,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setInterval(autoSlide, 2500);
 });
+

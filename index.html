@@ -158,7 +158,7 @@
 <section class="enquiry">
     <div class="enquiry-container">
         <h2>Enquire Now</h2>
-        <form class="enquiry-form">
+        <form id="whatsapp-form" class="enquiry-form">
             <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
             <input type="tel" placeholder="Your Phone Number" required>
@@ -167,6 +167,30 @@
         </form>
     </div>
 </section>
+
+<script>
+    document.getElementById("whatsapp-form").addEventListener("submit", function(e) {
+        e.preventDefault();
+    
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let phone = document.getElementById("phone").value;
+        let message = document.getElementById("message").value;
+    
+        let whatsappMessage = 
+            "New Enquiry from Website:%0A%0A" +
+            "Name: " + name + "%0A" +
+            "Email: " + email + "%0A" +
+            "Phone: " + phone + "%0A" +
+            "Message: " + message;
+    
+        let whatsappURL = "https://wa.me/918667695702?text=" + whatsappMessage;
+    
+        window.open(whatsappURL, "_blank");
+    
+        document.getElementById("whatsapp-form").reset();
+    });
+    </script>
 
 <!-- CONTACT -->
 <section class="contact">
