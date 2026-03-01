@@ -70,7 +70,7 @@ section {
 .gallery-track {
     display: flex;
     gap: 20px;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease-in-out;
 }
 
 .gallery-track img {
@@ -289,16 +289,4 @@ footer {
 
 .social-icons a:hover {
     transform: scale(1.1);
-}
-
-@media (max-width: 992px) {
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
 }
