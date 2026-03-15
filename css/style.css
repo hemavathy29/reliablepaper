@@ -373,10 +373,17 @@ footer {
     justify-content: center;
 }
 
-.video-wrapper video {
+.video-box{
     width: 100%;
     max-width: 350px;
-    aspect-ratio: 16 / 9;   /* Force same ratio */
-    object-fit: cover;      /* Crop nicely */
+    aspect-ratio: 16 / 9;   /* Force same shape */
+    overflow: hidden;
     border-radius: 10px;
+    background: #000;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* Crop nicely */
 }
