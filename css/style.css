@@ -374,6 +374,7 @@ footer {
 }
 
 .video-box{
+    flex: 1 1 300px;
     width: 100%;
     max-width: 350px;
     aspect-ratio: 16 / 9;   /* Force same shape */
@@ -386,4 +387,10 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;      /* Crop nicely */
+}
+
+@media (min-width: 992px) {
+    .video-box {
+        flex: 0 0 30%;
+    }
 }
