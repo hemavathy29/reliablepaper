@@ -359,14 +359,23 @@ footer {
     transform: scale(1.1);
 }
 
-video {
-    width: 100%;
-    margin: 10px;
-}
-
 .responsive-video {
     width: 100%;
     height: auto;
     max-width: 100%;
     display: block;
+}
+
+.video-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.video-wrapper video {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
 }
