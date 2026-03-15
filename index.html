@@ -112,16 +112,20 @@
     <h2>Our Videos</h2>
 
     <div class="video-wrapper">
-        <div class="video-box">
-            <video controls class="responsive-video">
+        <div class="video-box" onclick="openVideo('videos/video-1.mp4')">
+            <video muted>
                 <source src="videos/video-1.mp4" type="video/mp4">
             </video>
+        </div>
 
-            <video controls class="responsive-video">
+        <div class="video-box" onclick="openVideo('videos/video-2.mp4')">
+            <video muted>
                 <source src="videos/video-2.mp4" type="video/mp4">
             </video>    
+        </div>
 
-            <video controls class="responsive-video">
+        <div class="video-box" onclick="openVideo('videos/video-3.mp4')">
+            <video muted>
                 <source src="videos/video-3.mp4" type="video/mp4">
             </video>
         </div>
@@ -250,6 +254,11 @@
 
 <button onclick="togglePlay()">Play / Pause</button>
 
+<div id="videoModal" class="video-modal">
+    <span class="close-btn" onclick="closeVideo()">&times;</span>
+    <video id="popupVideo" controls autoplay></video>
+</div>
+
 <script>
 function togglePlay() {
     var video = document.getElementById("myVideo");
@@ -260,5 +269,24 @@ function togglePlay() {
     }
 }
 </script>
+
+<script>
+    function openVideo(src) {
+        const modal = document.getElementById("videoModal");
+        const video = document.getElementById("popupVideo");
+    
+        video.src = src;
+        modal.style.display = "flex";
+    }
+    
+    function closeVideo() {
+        const modal = document.getElementById("videoModal");
+        const video = document.getElementById("popupVideo");
+    
+        video.pause();
+        video.src = "";
+        modal.style.display = "none";
+    }
+    </script>
 
 </html>
