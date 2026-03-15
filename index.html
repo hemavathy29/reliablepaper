@@ -245,4 +245,17 @@
     });
 </script>
 
+<button onclick="togglePlay()">Play / Pause</button>
+
+<script>
+function togglePlay() {
+    var video = document.getElementById("myVideo");
+    if (video.paused) {
+        video.play();
+    } else {
+        video.pause();
+    }
+}
+</script>
+
 </html>
