@@ -376,6 +376,7 @@ footer {
 .video-wrapper video {
     width: 100%;
     max-width: 350px;
-    height: auto;
+    aspect-ratio: 16 / 9;   /* Force same ratio */
+    object-fit: cover;      /* Crop nicely */
     border-radius: 10px;
 }
