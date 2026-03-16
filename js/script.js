@@ -35,3 +35,12 @@ document.addEventListener("DOMContentLoaded", function () {
     setInterval(autoSlide, 2500);
 });
 
+<script>
+function openPDF() {
+    document.getElementById("pdfModal").style.display = "flex";
+}
+
+function closePDF() {
+    document.getElementById("pdfModal").style.display = "none";
+}
+</script>
