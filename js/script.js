@@ -37,10 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <script>
 function openPDF() {
-    document.getElementById("pdfModal").style.display = "flex";
-}
+    document.getElementById("pdfModal").style.display = "flex"}
 
 function closePDF() {
-    document.getElementById("pdfModal").style.display = "none";
-}
+    document.getElementById("pdfModal").style.display = "none"}
 </script>
