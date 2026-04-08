@@ -488,6 +488,7 @@ footer {
 .spec-row {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 40px;
     margin-bottom: 60px;
     flex-wrap: wrap;
@@ -520,6 +521,6 @@ footer {
 
 .spec-image img {
     width: 100%;
-    max-width: 450px;
+    max-width: 400px;
     border-radius: 10px;
 }
