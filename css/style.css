@@ -503,7 +503,7 @@ footer {
     flex: 1;
 }
 
-.spec-text h2 {
+.spec-text h4 {
     font-size: 18px;
     margin-bottom: 20px;
 }
@@ -537,7 +537,7 @@ footer {
         text-align: center;
     }
 
-    .spec-text h2 {
+    .spec-text h4 {
         font-size: 18px;
     }
 
