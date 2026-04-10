@@ -512,6 +512,7 @@ footer {
 .spec-text ul {
     padding-left: 15px;
     margin: 0;
+    list-style-position: inside;
 }
 
 .spec-text li {
