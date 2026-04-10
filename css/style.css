@@ -503,20 +503,20 @@ footer {
     flex: 1;
 }
 
-.spec-text h4 {
+.spec-text h2 {
     font-size: 18px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
 }
 
 .spec-text ul {
-    list-style: disc;
-    padding-left: 20px;
+    padding-left: 18px;
 }
 
 .spec-text li {
-    margin-bottom: 8px;
-    font-size: 16px;
-    line-height: 1.8;
+    margin-bottom: 6px;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
 .spec-image {
@@ -537,8 +537,8 @@ footer {
         text-align: center;
     }
 
-    .spec-text h4 {
-        font-size: 18px;
+    .spec-text h2 {
+        font-size: 18px !important;
     }
 
     .spec-image img {
