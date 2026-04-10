@@ -524,3 +524,17 @@ footer {
     max-width: 400px;
     border-radius: 10px;
 }
+
+@media (max-width: 768px) {
+    .spec-row{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .spec-row.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+}
