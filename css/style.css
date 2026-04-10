@@ -489,9 +489,10 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 50px;
     margin-bottom: 60px;
     flex-wrap: wrap;
+    padding: 60px 8%;
 }
 
 .spec-row.reverse {
@@ -502,16 +503,20 @@ footer {
     flex: 1;
 }
 
-.spec-text h3 {
-    margin-bottom: 15px;
+.spec-text h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
 .spec-text ul {
+    list-style: disc;
     padding-left: 20px;
 }
 
 .spec-text li {
     margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 1.8;
 }
 
 .spec-image {
@@ -521,8 +526,9 @@ footer {
 
 .spec-image img {
     width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 @media (max-width: 768px) {
@@ -530,11 +536,12 @@ footer {
         flex-direction: column;
         text-align: center;
     }
-}
 
-@media (max-width: 768px) {
-    .spec-row.reverse {
-        flex-direction: column;
-        text-align: center;
+    .spec-text h2 {
+        font-size: 22px;
+    }
+
+    .spec-image img {
+        max-width: 100%;
     }
 }
