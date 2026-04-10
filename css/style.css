@@ -510,13 +510,15 @@ footer {
 }
 
 .spec-text ul {
-    padding-left: 18px;
+    padding-left: 15px;
+    margin: 0;
 }
 
 .spec-text li {
     margin-bottom: 6px;
     font-size: 14px;
     line-height: 1.6;
+    padding-left: 0;
 }
 
 .spec-image {
