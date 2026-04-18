@@ -5,7 +5,12 @@
         <title>Reliable Paper | Paper Plate Manufacturer in Chennai</title>
     
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+        <meta name="theme-color" content="#0c0f14">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
         <!-- SEO Meta Description -->
         <meta name="description" content="Reliable Paper is a leading paper plate manufacturer in Chennai. We provide eco-friendly disposable paper plates for events, catering, and wholesale supply.">
     
@@ -43,47 +48,79 @@
             "postalCode": "600042",
             "addressCountry": "IN"
           },
-          "telephone": "+919962237575", "+919344555155"
+          "telephone": ["+919962237575", "+919344555155"],
           "email": "info@reliablepaper.in"
         }
         </script>
 
-<!-- HEADER -->
-<header>
-    <h1>Reliable Paper</h1>
+<header class="site-header">
+    <div class="header-inner">
+        <a class="brand" href="#">Reliable <span>Paper</span></a>
+        <nav class="site-nav" aria-label="Primary">
+            <a href="#about">About</a>
+            <a href="#services">Products</a>
+            <a href="#videos">Media</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#machines">Machines</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <a class="btn btn-header" href="#enquiry">Enquire</a>
+    </div>
 </header>
 
-<!-- HERO SECTION WITH YOUTUBE VIDEO -->
-<section class="hero">
-    <div class="video-container">
-        <iframe 
-            src="https://www.youtube.com/embed/i0PxQ7MkkMY"
-            title="Reliable Paper Manufacturing Video"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-        </iframe>
+<main>
+<section class="hero" id="top">
+    <div class="hero-inner section-wrap">
+        <div class="hero-copy">
+            <p class="section-eyebrow">Chennai · Manufacturing</p>
+            <h1>Paper products &amp; plate-making machines, engineered for quality</h1>
+            <p class="hero-lead">Eco-conscious disposables and industrial equipment for catering, events, and wholesale—backed by modern production and dependable support.</p>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="#enquiry">Request a quote</a>
+                <a class="btn btn-ghost" href="#machines">Explore machines</a>
+            </div>
+        </div>
+        <div class="hero-media">
+            <div class="video-frame">
+                <div class="video-container">
+                    <iframe
+                        src="https://www.youtube.com/embed/i0PxQ7MkkMY"
+                        title="Reliable Paper Manufacturing Video"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
-<!-- ABOUT -->
-<section class="about">
-    <h2>About Reliable Paper</h2>
-    <p>Reliable Paper was established as part of a modern manufacturing facility equipped with the latest technology. We are a leading manufacturer 
-        of high-quality paper plates, offering eco-friendly and durable paper products tailored to meet diverse business and event requirements.</br>
-
-        Backed by extensive industry experience and expertise, we are committed to addressing the growing demand for sustainable solutions in the 
-        food service industry. Our state-of-the-art manufacturing plant ensures the efficient production of premium-quality food service products within 
-        minimal turnaround time.</p>
+<section class="about" id="about">
+    <div class="section-head">
+        <p class="section-eyebrow">Who we are</p>
+        <h2>About Reliable Paper</h2>
+        <p>Precision manufacturing with sustainability at the core of how we serve businesses across South India.</p>
+    </div>
+    <div class="section-wrap">
+        <p>Reliable Paper was established as part of a modern manufacturing facility equipped with the latest technology. We are a leading manufacturer
+            of high-quality paper plates, offering eco-friendly and durable paper products tailored to meet diverse business and event requirements.<br><br>
+            Backed by extensive industry experience and expertise, we are committed to addressing the growing demand for sustainable solutions in the
+            food service industry. Our state-of-the-art manufacturing plant ensures the efficient production of premium-quality food service products within
+            minimal turnaround time.</p>
+    </div>
 </section>
 
-<!-- SERVICES -->
-<section class="services">
-    <h2>Our Services</h2>
-    <p>We offer a wide range of products to meet your needs. Our products are made from the best quality materials and are designed to last.</p>
-    <div class="product-container">
+<section class="services" id="services">
+    <div class="section-head">
+        <p class="section-eyebrow">Product range</p>
+        <h2>Our services</h2>
+        <p>Materials chosen for strength, hygiene, and responsible disposal—built for real-world catering and retail.</p>
+    </div>
+    <div class="product-container section-wrap">
         <div class="product">
-            <img src="images/product/aluminium_container.jpeg" alt="Aluminium Container">
+            <div class="thumb">
+                <img src="images/product/aluminium_container.jpeg" alt="Aluminium Container">
+            </div>
             <h3>Aluminium Container</h3>
             <p class="description">
                 High-quality aluminium containers suitable for food and beverage storage.
@@ -91,7 +128,9 @@
             </p>
         </div>
         <div class="product">
-            <img src="images/product/bagasse_tablewares.jpeg" alt="Bagasse Tablewares">
+            <div class="thumb">
+                <img src="images/product/bagasse_tablewares.jpeg" alt="Bagasse Tablewares">
+            </div>
             <h3>Bagasse Tablewares</h3>
             <p class="description">
                 Environment-friendly biodegradable tablewares made from premium bagasse materials.
@@ -99,7 +138,9 @@
             </p>
         </div>
         <div class="product">
-            <img src="images/product/paper_plate.jpeg" alt="Paper Plate">
+            <div class="thumb">
+                <img src="images/product/paper_plate.jpeg" alt="Paper Plate">
+            </div>
             <h3>Paper Plate</h3>
             <p class="description">
                 High-quality paper plates suitable for events, catering, and daily use.
@@ -109,10 +150,14 @@
     </div>
 </section>
 
-<section class="videos">
-    <h2>Our Videos</h2>
+<section class="videos" id="videos">
+    <div class="section-head">
+        <p class="section-eyebrow">On the floor</p>
+        <h2>Our videos</h2>
+        <p>See production quality up close—tap a preview to watch in full.</p>
+    </div>
 
-    <div class="video-wrapper">
+    <div class="video-wrapper section-wrap">
         <div class="video-box" onclick="openVideo('videos/video-1.mp4')">
             <video muted>
                 <source src="videos/video-1.mp4" type="video/mp4">
@@ -131,49 +176,56 @@
             </video>
         </div>
     </div>
-</section>
 
-<!-- Social Icons-->     
-    <div class="social-icons">
-        <a href="https://wa.me/919962237575" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-    
-        <a href="https://www.facebook.com/Reliablepaper?mibextid=wwXIfr&rdid=8xrrjo4A4wV2kTfv&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17z7KMpYLN%2F%3Fmibextid%3DwwXIfr#" target="_blank">
-            <i class="fab fa-facebook-f"></i>
+    <div class="social-icons section-wrap" aria-label="Social links">
+        <a href="https://wa.me/919962237575" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
         </a>
 
-        <a href="https://www.instagram.com/reliablepapers" target="_blank">
-            <i class="fab fa-instagram"></i>
-        </a>    
-    
-        <a href="https://www.youtube.com/@reliablepaper-chennai" target="_blank">
-            <i class="fab fa-youtube"></i>
+        <a href="https://www.facebook.com/Reliablepaper?mibextid=wwXIfr&rdid=8xrrjo4A4wV2kTfv&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17z7KMpYLN%2F%3Fmibextid%3DwwXIfr#" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f" aria-hidden="true"></i>
         </a>
-        <a href="https://www.google.com/maps/place/Reliable+Paper+-+Paper+Plate+Making+Machine+Manufacturer/@12.9745933,80.2201213,17z/data=!4m6!3m5!1s0x3a5266456c05aaa1:0x14683f5388d2431!8m2!3d12.9745933!4d80.2201213!16s%2Fg%2F11b5z0wgtf!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDIxOC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
-            <i class="fas fa-map-marker-alt"></i>
-        </a>    
-         
+
+        <a href="https://www.instagram.com/reliablepapers" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+        </a>
+
+        <a href="https://www.youtube.com/@reliablepaper-chennai" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-youtube" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.google.com/maps/place/Reliable+Paper+-+Paper+Plate+Making+Machine+Manufacturer/@12.9745933,80.2201213,17z/data=!4m6!3m5!1s0x3a5266456c05aaa1:0x14683f5388d2431!8m2!3d12.9745933!4d80.2201213!16s%2Fg%2F11b5z0wgtf!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDIxOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+        </a>
     </div>
 </section>
 
-<!-- GALLERY Auto Slider -->
-<section class="gallery">
-    <h2>Gallery</h2>
+<section class="gallery" id="gallery">
+    <div class="section-head">
+        <p class="section-eyebrow">Proof of work</p>
+        <h2>Gallery</h2>
+        <p>Orders, quotations, and pricing snapshots from real engagements.</p>
+    </div>
+    <div class="gallery-slider-wrap section-wrap">
         <div class="gallery-slider" id="gallerySlider">
             <img src="images/reliable-order-details.jpeg" alt="Reliable Order Details" onclick="openModal(this)">
             <img src="images/reliable-quation-summary.jpeg" alt="Reliable Quation Summary" onclick="openModal(this)">
             <img src="images/price-list-summary.jpeg" alt="Price List Summary" onclick="openModal(this)">
         </div>
+    </div>
 </section>
 
 <!-- Image Popup Modal -->
 <div id="imageModal" class="modal" onclick="closeModal()">
     <span class="close">&times;</span>
-    <img class="modal-content" id="popupImg">
+    <img class="modal-content" id="popupImg" alt="" onclick="event.stopPropagation()">
 </div>
 
-<section class="specifications">
+<section class="specifications" id="machines">
+    <div class="section-head">
+        <p class="section-eyebrow">Equipment lineup</p>
+        <h2>Machine specifications</h2>
+        <p>Models, capacities, and pricing at a glance—tap any image to enlarge.</p>
+    </div>
 
     <!-- Item 1 -->
     <div class="spec-row">
@@ -449,9 +501,12 @@
     </div>
 </section>
 
-<!--PDF-->
-<section class="pdf-section">
-    <h2>Our Machines</h2>
+<section class="pdf-section" id="brochure">
+    <div class="section-head">
+        <p class="section-eyebrow">Downloads</p>
+        <h2>Machine brochure</h2>
+        <p>Full specification sheet in one place—view inline or download for your team.</p>
+    </div>
 
     <div class="pdf-box" onclick="openPDF()">
         <i class="fas fa-file-pdf"></i>
@@ -472,10 +527,10 @@
     </div>
 </div>
 
-<!-- ENQUIRY -->
-<section class="enquiry">
+<section class="enquiry" id="enquiry">
     <div class="enquiry-container">
-        <h2>Enquire Now</h2>
+        <h2>Enquire now</h2>
+        <p class="sub">Share your details—we will respond on WhatsApp with next steps.</p>
         <form id="whatsapp-form" class="enquiry-form">
             <input type="text" id="name" placeholder="Your Name" required>
             <input type="email" id="email" placeholder="Your Email" required>
@@ -487,25 +542,50 @@
 </section>
 
 
-<!-- CONTACT -->
-<section class="contact">
-    <h2>Contact Us</h2>
-    <p>📞 Mobile: <a href="tel:+919962237575">+919962237575</a></p>
-    <p>📞 Mobile: <a href="tel:+919344555155">+919344555155</a></p>
-    <p>📧 Email: <a href="mailto:info@reliablepaper.in">info@reliablepaper.in</a></p>
-    <p><strong>Address:</strong> D3, Paramount Park, <br> Velachery Main Road, <br> velachery, Chennai - 600042</p>
+<section class="contact" id="contact">
+    <div class="section-head">
+        <p class="section-eyebrow">Visit &amp; call</p>
+        <h2>Contact us</h2>
+        <p>Reach the team directly for machine demos, bulk orders, or technical questions.</p>
+    </div>
+    <div class="section-wrap">
+        <div class="contact-grid">
+            <div class="contact-card">
+                <i class="fas fa-phone" aria-hidden="true"></i>
+                <div>
+                    <div class="label">Primary</div>
+                    <a href="tel:+919962237575">+91 99622 37575</a>
+                </div>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-phone" aria-hidden="true"></i>
+                <div>
+                    <div class="label">Secondary</div>
+                    <a href="tel:+919344555155">+91 93445 55155</a>
+                </div>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+                <div>
+                    <div class="label">Email</div>
+                    <a href="mailto:info@reliablepaper.in">info@reliablepaper.in</a>
+                </div>
+            </div>
+        </div>
+        <p class="contact-address"><strong>Address:</strong> D3, Paramount Park, Velachery Main Road, Velachery, Chennai&nbsp;–&nbsp;600042</p>
+    </div>
 
-
-    <!-- Google Map -->
-    <div class="map-container">
+    <div class="map-container section-wrap">
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3887.9571381243686!2d80.2201213!3d12.9745933!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266456c05aaa1%3A0x14683f5388d2431!2sReliable%20Paper%20-%20Paper%20Plate%20Making%20Machine%20Manufacturer!5e0!3m2!1sen!2sin!4v1771949130167!5m2!1sen!2sin" 
         width="600" height="450" style="border:0;" 
         allowfullscreen="" 
         loading="lazy" 
         referrerpolicy="no-referrer-when-downgrade">
         </iframe>
-    </div>   
+    </div>
 </section>
+
+</main>
 
 <!-- WhatsApp Floating Button -->
 <a href="https://wa.me/919962237575" 
@@ -518,69 +598,11 @@
     <p>© 2026 Reliable Paper. All Rights Reserved.</p>
 </footer>
 
-<script src="js/script.js"></script>
-
-</body>
-
-<script>
-    document.getElementById("whatsapp-form").addEventListener("submit", function(e) {
-        e.preventDefault();
-    
-        let name = document.getElementById("name").value;
-        let email = document.getElementById("email").value;
-        let phone = document.getElementById("phone").value;
-        let message = document.getElementById("message").value;
-    
-        let whatsappMessage = 
-            "New Enquiry from Website:%0A%0A" +
-            "Name: " + name + "%0A" +
-            "Email: " + email + "%0A" +
-            "Phone: " + phone + "%0A" +
-            "Message: " + message;
-    
-        let whatsappURL = "https://wa.me/919962237575?text=" + whatsappMessage;
-    
-        window.open(whatsappURL, "_blank");
-    
-        document.getElementById("whatsapp-form").reset();
-    });
-</script>
-
-<button onclick="togglePlay()">Play / Pause</button>
-
 <div id="videoModal" class="video-modal">
     <span class="close-btn" onclick="closeVideo()">&times;</span>
-    <video id="popupVideo" controls autoplay></video>
+    <video id="popupVideo" controls playsinline></video>
 </div>
 
-<script>
-function togglePlay() {
-    var video = document.getElementById("myVideo");
-    if (video.paused) {
-        video.play();
-    } else {
-        video.pause();
-    }
-}
-</script>
-
-<script>
-    function openVideo(src) {
-        const modal = document.getElementById("videoModal");
-        const video = document.getElementById("popupVideo");
-    
-        video.src = src;
-        modal.style.display = "flex";
-    }
-    
-    function closeVideo() {
-        const modal = document.getElementById("videoModal");
-        const video = document.getElementById("popupVideo");
-    
-        video.pause();
-        video.src = "";
-        modal.style.display = "none";
-    }
-    </script>
-
+<script src="js/script.js"></script>
+</body>
 </html>
