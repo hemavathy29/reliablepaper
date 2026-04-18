@@ -1015,19 +1015,20 @@ footer {
     display: grid;
     grid-template-columns: 1.125rem minmax(150px, 40%) 1fr;
     column-gap: 12px;
-    row-gap: 2px;
+    row-gap: 0;
     align-items: baseline;
     font-size: 0.9rem;
+    line-height: 1.35;
     color: var(--text-muted);
-    padding: 10px 0;
-    border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+    padding: 3px 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.06);
 }
 
 .spec-text li::before {
     content: "•";
     color: var(--accent);
     font-weight: 700;
-    line-height: 1.4;
+    line-height: 1.35;
     justify-self: center;
 }
 
