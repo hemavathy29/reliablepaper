@@ -1012,10 +1012,10 @@ footer {
     margin: 0;
 }
 
-/* Grid + custom bullet: compact line-by-line spec sheet */
+/* Per-row grid: label column is only as wide as that line’s label (no minmax(150px, …) gap) */
 .spec-text li {
     display: grid;
-    grid-template-columns: 1.125rem minmax(150px, 40%) 1fr;
+    grid-template-columns: 1.125rem auto 1fr;
     column-gap: 10px;
     row-gap: 0;
     align-items: baseline;
@@ -1023,22 +1023,24 @@ footer {
     line-height: 1.22;
     color: var(--text-muted);
     padding: 2px 0;
+    min-width: 0;
 }
 
 .spec-text li::before {
     content: "•";
     color: var(--accent);
     font-weight: 700;
-    line-height: 1.22;
+    line-height: inherit;
     justify-self: center;
 }
 
-/* Plain-text lines (no <span> label) — bullet + single text column */
-.spec-text li:not(:has(span)) {
+/* Plain-text lines — bullet + one flowing column */
+.spec-text li:not(:has(span)):not(:has(strong)) {
     grid-template-columns: 1.125rem 1fr;
 }
 
-.spec-text li span {
+.spec-text li span,
+.spec-text li strong {
     color: var(--accent);
     font-weight: 700;
     font-size: 0.72rem;
@@ -1159,10 +1161,6 @@ footer {
 
     .spec-text {
         text-align: left;
-    }
-
-    .spec-text li {
-        grid-template-columns: 1.125rem minmax(120px, 38%) 1fr;
     }
 }
 
