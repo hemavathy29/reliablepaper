@@ -985,15 +985,16 @@ footer {
 .video-wrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 22px;
+    gap: 20px;
     justify-content: center;
+    align-items: flex-start;
 }
 
 .video-box {
     position: relative;
-    flex: 1 1 280px;
-    max-width: 360px;
-    aspect-ratio: 16 / 9;
+    flex: 0 1 230px;
+    width: 230px;
+    aspect-ratio: 9 / 16;
     overflow: hidden;
     border-radius: var(--radius-md);
     background: #000;
@@ -1004,26 +1005,52 @@ footer {
 }
 
 .video-box:hover {
-    transform: translateY(-4px);
-    border-color: rgba(201, 162, 39, 0.4);
+    transform: translateY(-6px);
+    border-color: rgba(201, 162, 39, 0.45);
+    box-shadow: 0 20px 48px rgba(26, 31, 38, 0.14);
 }
 
 .video-box::after {
-    content: "▶";
+    content: "";
     position: absolute;
     inset: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.6rem;
-    color: rgba(255, 255, 255, 0.92);
-    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.28);
+    transition: background 0.2s;
+}
+
+.video-box::before {
+    content: "▶";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.18);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    color: #fff;
+    text-indent: 3px;
+    backdrop-filter: blur(4px);
     pointer-events: none;
-    transition: opacity 0.2s;
+    transition: background 0.2s, transform 0.2s;
 }
 
 .video-box:hover::after {
-    opacity: 0.6;
+    background: rgba(0, 0, 0, 0.14);
+}
+
+.video-box:hover::before {
+    background: rgba(255, 255, 255, 0.28);
+    transform: translate(-50%, -50%) scale(1.08);
 }
 
 .video-wrapper video {
@@ -1033,18 +1060,20 @@ footer {
     height: 100%;
     display: block;
     object-fit: cover;
-    object-position: center;
+    object-position: top center;
 }
 
-/* Portrait or letterboxed sources: zoom past baked-in side padding (tune per clip if needed). */
-.video-box--crop-in video {
-    transform: scale(1.22);
-    transform-origin: center center;
-}
-
-@media (min-width: 992px) {
+@media (max-width: 768px) {
     .video-box {
-        flex: 0 0 30%;
+        flex: 0 1 160px;
+        width: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-box {
+        flex: 0 1 140px;
+        width: 140px;
     }
 }
 
@@ -1406,11 +1435,6 @@ footer {
 
     .spec-text {
         text-align: left;
-    }
-
-    .video-box {
-        flex: 1 1 260px;
-        max-width: 100%;
     }
 
     .pdf-content iframe {
