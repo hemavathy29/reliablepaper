@@ -84,3 +84,62 @@ window.closeVideo = function () {
     video.src = "";
     modal.style.display = "none";
 };
+
+/* ------------------------------------------------------------------
+   Scroll-reveal animations
+   ------------------------------------------------------------------ */
+(function () {
+    const targets = document.querySelectorAll(
+        ".section-head, .product, .spec-row, .contact-card, .trust-item, .video-box, .enquiry-container, .pdf-box, .gallery-slider-wrap"
+    );
+
+    targets.forEach(function (el) {
+        el.classList.add("reveal");
+    });
+
+    const revealObserver = new IntersectionObserver(
+        function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.1 }
+    );
+
+    targets.forEach(function (el) {
+        revealObserver.observe(el);
+    });
+})();
+
+/* ------------------------------------------------------------------
+   Active nav link highlighting
+   ------------------------------------------------------------------ */
+(function () {
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".site-nav a");
+
+    if (!sections.length || !navLinks.length) return;
+
+    const navObserver = new IntersectionObserver(
+        function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(function (link) {
+                        link.classList.toggle(
+                            "active",
+                            link.getAttribute("href") === "#" + entry.target.id
+                        );
+                    });
+                }
+            });
+        },
+        { rootMargin: "-35% 0px -60% 0px" }
+    );
+
+    sections.forEach(function (s) {
+        navObserver.observe(s);
+    });
+})();

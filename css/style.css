@@ -30,6 +30,7 @@
 html {
     scroll-behavior: smooth;
     color-scheme: light;
+    scroll-padding-top: 90px;
 }
 
 html,
@@ -182,6 +183,57 @@ a {
     color: var(--accent);
 }
 
+.site-nav a.active {
+    color: var(--accent);
+}
+
+/* ------------------------------------------------------------------
+   Scroll reveal
+   ------------------------------------------------------------------ */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* ------------------------------------------------------------------
+   Trust strip
+   ------------------------------------------------------------------ */
+.trust-strip {
+    background: var(--bg-elevated);
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 18px 24px;
+}
+
+.trust-strip-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 48px;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+}
+
+.trust-item i {
+    color: var(--accent);
+    font-size: 0.95rem;
+}
+
 /* ------------------------------------------------------------------
    Layout helpers
    ------------------------------------------------------------------ */
@@ -322,6 +374,10 @@ section {
     font-size: 1.05rem;
 }
 
+.about .section-wrap > p + p {
+    margin-top: 18px;
+}
+
 .services {
     background: var(--bg-elevated);
     border-top: 1px solid var(--border-subtle);
@@ -455,9 +511,15 @@ section {
 .gallery-slider {
     display: flex;
     gap: 22px;
-    overflow-x: hidden;
+    overflow-x: auto;
     scroll-behavior: smooth;
     padding: 8px 4px 12px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.gallery-slider::-webkit-scrollbar {
+    display: none;
 }
 
 .gallery-slider img {
@@ -678,12 +740,144 @@ section {
    Footer
    ------------------------------------------------------------------ */
 footer {
-    background: #ebe9e4;
-    color: var(--text-muted);
-    padding: 28px 24px;
-    text-align: center;
+    background: #1a1f26;
+    color: rgba(255, 255, 255, 0.6);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 56px 24px 40px;
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1.4fr;
+    gap: 40px;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer-logo {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+}
+
+.footer-logo span {
+    color: #c9a227;
+}
+
+.footer-brand p {
     font-size: 0.88rem;
-    border-top: 1px solid var(--border-subtle);
+    line-height: 1.65;
+    max-width: 28ch;
+}
+
+.footer-social {
+    display: flex;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.footer-social a {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.footer-social a:hover {
+    background: #c9a227;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.footer-nav h4,
+.footer-contact h4 {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 16px;
+}
+
+.footer-nav ul,
+.footer-contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-nav a {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.65);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-nav a:hover {
+    color: #c9a227;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+.footer-contact i {
+    color: #c9a227;
+    font-size: 0.8rem;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.footer-contact a {
+    color: rgba(255, 255, 255, 0.65);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-contact a:hover {
+    color: #c9a227;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    padding: 20px 24px;
+    text-align: center;
+    font-size: 0.82rem;
+}
+
+@media (max-width: 768px) {
+    .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 40px 20px 32px;
+    }
+
+    .footer-brand p {
+        max-width: 100%;
+    }
 }
 
 /* ------------------------------------------------------------------
@@ -812,6 +1006,24 @@ footer {
 .video-box:hover {
     transform: translateY(-4px);
     border-color: rgba(201, 162, 39, 0.4);
+}
+
+.video-box::after {
+    content: "▶";
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, 0.92);
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.7);
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+
+.video-box:hover::after {
+    opacity: 0.6;
 }
 
 .video-wrapper video {
@@ -1088,6 +1300,14 @@ footer {
    Responsive
    ------------------------------------------------------------------ */
 @media (max-width: 960px) {
+    html {
+        scroll-padding-top: 130px;
+    }
+
+    .hero {
+        padding: 36px 24px 52px;
+    }
+
     .hero-inner {
         grid-template-columns: 1fr;
         gap: 36px;
@@ -1148,7 +1368,19 @@ footer {
     }
 
     section {
-        padding: 56px 20px;
+        padding: 52px 20px;
+    }
+
+    /* Override named sections whose specific classes beat the generic rule */
+    .enquiry,
+    .contact,
+    .specifications,
+    .pdf-section {
+        padding: 52px 20px;
+    }
+
+    .section-head {
+        margin-bottom: 32px;
     }
 
     .product {
@@ -1175,9 +1407,55 @@ footer {
     .spec-text {
         text-align: left;
     }
+
+    .video-box {
+        flex: 1 1 260px;
+        max-width: 100%;
+    }
+
+    .pdf-content iframe {
+        height: 300px;
+    }
 }
 
 @media (max-width: 480px) {
+    .trust-strip-inner {
+        gap: 10px 24px;
+    }
+
+    .trust-item {
+        font-size: 0.78rem;
+    }
+
+    .hero {
+        padding: 24px 18px 36px;
+    }
+
+    section {
+        padding: 44px 18px;
+    }
+
+    .enquiry,
+    .contact,
+    .specifications,
+    .pdf-section {
+        padding: 44px 18px;
+    }
+
+    .section-head {
+        margin-bottom: 24px;
+    }
+
+    .hero-copy h1 {
+        font-size: 1.95rem;
+    }
+
+    .spec-row,
+    .spec-row.reverse {
+        padding: 20px 14px;
+        gap: 24px;
+    }
+
     .whatsapp-float {
         bottom: 18px;
         right: 18px;
@@ -1187,5 +1465,14 @@ footer {
 
     .gallery-slider img {
         min-width: 220px;
+        height: 160px;
+    }
+
+    .enquiry-container {
+        padding: 28px 16px 32px;
+    }
+
+    .map-container iframe {
+        height: 280px;
     }
 }
